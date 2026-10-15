@@ -1,0 +1,2319 @@
+
+/* =====================================================
+   SABORES DE CAÑAS
+   INICIO - ESTILO ELEGANTE
+   MISMO DISEÑO VISUAL QUE GALERÍA
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --verde: #092b1d;
+    --verde-2: #103b29;
+    --verde-3: #1b4b35;
+
+    --crema: #f8f5ee;
+    --crema-2: #eee8dc;
+    --beige: #d8ccb6;
+
+    --dorado: #c6a45b;
+    --dorado-claro: #e1ca8b;
+
+    --texto: #26342b;
+
+    --gris: #6d716b;
+
+    --sombra:
+        rgba(20, 38, 28, .16);
+}
+
+
+/* =====================================================
+   RESETEO GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f0e8;
+
+    color: var(--texto);
+
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    width: min(1120px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.encabezado {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(9, 43, 29, .98);
+
+    border-bottom:
+        1px solid
+        rgba(198, 164, 91, .30);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .12);
+}
+
+.barra-navegacion {
+
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-left: 48px;
+
+    min-width: max-content;
+}
+
+.logo-icono {
+
+    position: absolute;
+
+    left: 0;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius: 50%;
+
+    color:
+        var(--dorado);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 20px;
+}
+
+.logo h1 {
+
+    color:
+        var(--crema);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+}
+
+.logo > div > span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color:
+        var(--dorado-claro);
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+#menuNavegacion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+#menuNavegacion a {
+
+    color:
+        #f5f1e8;
+
+    text-decoration: none;
+
+    padding:
+        11px 19px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        .3s ease;
+}
+
+#menuNavegacion a:hover {
+
+    color:
+        var(--dorado-claro);
+}
+
+#menuNavegacion a.activo {
+
+    color:
+        var(--dorado-claro);
+
+    border-color:
+        var(--dorado);
+
+    background:
+        rgba(198, 164, 91, .06);
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ
+===================================================== */
+
+.boton-menu {
+
+    display: none;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius: 8px;
+
+    background:
+        transparent;
+
+    color:
+        var(--dorado-claro);
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(7, 39, 27, .82),
+            rgba(7, 39, 27, .94)
+        ),
+
+        url("../img/hero.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+/* =====================================================
+   CAPA HERO
+===================================================== */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(9, 43, 29, .35) 100%
+        );
+}
+
+
+/* =====================================================
+   CONTENIDO HERO
+===================================================== */
+
+.hero-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(800px, 90%);
+
+    padding:
+        70px 0 100px;
+
+    text-align: center;
+
+    animation:
+        aparecer .8s ease;
+}
+
+.etiqueta-hero {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color:
+        var(--dorado-claro);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero-contenido h2 {
+
+    margin-bottom: 18px;
+
+    color:
+        #f7f3eb;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(45px, 7vw, 72px);
+
+    font-weight: 600;
+
+    line-height: 1.05;
+}
+
+.hero-contenido h2 span {
+
+    display: block;
+
+    color:
+        var(--dorado-claro);
+}
+
+.hero-contenido > p {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 30px;
+
+    color:
+        rgba(248, 245, 238, .88);
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   DECORACIÓN HERO
+===================================================== */
+
+.hero::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    left: 7%;
+
+    bottom: 25px;
+
+    color:
+        rgba(198, 164, 91, .18);
+
+    font-size: 120px;
+
+    transform:
+        rotate(-15deg);
+}
+
+.hero::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 7%;
+
+    top: 80px;
+
+    color:
+        rgba(198, 164, 91, .15);
+
+    font-size: 90px;
+
+    transform:
+        rotate(15deg);
+}
+
+
+/* =====================================================
+   BOTONES HERO
+===================================================== */
+
+.hero-botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        13px 25px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        all .35s ease;
+}
+
+.boton-principal {
+
+    border:
+        1px solid
+        var(--dorado);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--dorado),
+            #d4b66e
+        );
+
+    color:
+        var(--verde);
+
+    box-shadow:
+        0 6px 18px
+        rgba(198, 164, 91, .20);
+}
+
+.boton-principal span {
+
+    font-size: 18px;
+
+    transition:
+        transform .3s ease;
+}
+
+.boton-principal:hover {
+
+    background:
+        var(--dorado-claro);
+
+    border-color:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(198, 164, 91, .30);
+}
+
+.boton-principal:hover span {
+
+    transform:
+        translateX(5px);
+}
+
+.boton-secundario {
+
+    border:
+        1px solid
+        rgba(225, 202, 139, .7);
+
+    background:
+        rgba(255, 255, 255, .03);
+
+    color:
+        var(--dorado-claro);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+.boton-secundario:hover {
+
+    background:
+        var(--dorado);
+
+    border-color:
+        var(--dorado);
+
+    color:
+        var(--verde);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   HERO ABAJO
+===================================================== */
+
+.hero-abajo {
+
+    position: absolute;
+
+    bottom: 28px;
+
+    left: 50%;
+
+    z-index: 3;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color:
+        var(--dorado-claro);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.hero-abajo .linea {
+
+    display: block;
+
+    width: 55px;
+
+    height: 1px;
+
+    background:
+        var(--dorado);
+}
+
+
+/* =====================================================
+   INTRODUCCIÓN
+===================================================== */
+
+.introduccion {
+
+    padding:
+        90px 0;
+
+    background:
+        #f4f0e8;
+}
+
+.intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.numero-seccion {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--dorado);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.intro-titulo h2 {
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 52px);
+
+    font-weight: 600;
+
+    line-height: 1.15;
+}
+
+.intro-titulo h2 em {
+
+    color:
+        var(--dorado);
+
+    font-style:
+        normal;
+}
+
+.intro-texto p {
+
+    margin-bottom: 18px;
+
+    color:
+        #536158;
+
+    font-size: 15px;
+}
+
+.intro-texto strong {
+
+    color:
+        var(--verde);
+}
+
+
+/* =====================================================
+   ENCABEZADOS DE SECCIÓN
+===================================================== */
+
+.encabezado-seccion {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.encabezado-seccion h2 {
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(35px, 5vw, 52px);
+
+    font-weight: 600;
+
+    line-height: 1.15;
+}
+
+.encabezado-seccion h2 em {
+
+    color:
+        var(--dorado);
+
+    font-style:
+        normal;
+}
+
+.encabezado-seccion > p {
+
+    max-width: 430px;
+
+    color:
+        #657168;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+===================================================== */
+
+.categorias {
+
+    padding:
+        85px 0;
+
+    background:
+        var(--crema);
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .2);
+
+    border-bottom:
+        1px solid
+        rgba(198, 164, 91, .2);
+}
+
+.categorias-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.categoria {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        62px 1fr 25px;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 150px;
+
+    padding: 25px;
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .55);
+
+    border-radius:
+        15px;
+
+    background:
+        #fffdf8;
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+
+    transition:
+        .35s ease;
+}
+
+.categoria:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--dorado);
+
+    box-shadow:
+        0 22px 45px
+        rgba(20, 38, 28, .22);
+}
+
+.categoria-icono {
+
+    width: 62px;
+
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid
+        var(--dorado);
+
+    border-radius: 50%;
+
+    background:
+        var(--verde);
+
+    font-size: 27px;
+}
+
+.categoria h3 {
+
+    margin-bottom: 5px;
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+.categoria p {
+
+    color:
+        #657168;
+
+    font-size: 12px;
+}
+
+.flecha {
+
+    color:
+        var(--dorado);
+
+    font-size: 21px;
+
+    transition:
+        .3s ease;
+}
+
+.categoria:hover .flecha {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =====================================================
+   LUGARES DESTACADOS
+===================================================== */
+
+.destacados {
+
+    padding:
+        90px 0;
+
+    background:
+        #f4f0e8;
+}
+
+.lugares-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   TARJETAS DE LUGARES
+===================================================== */
+
+.lugar-card {
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .55);
+
+    border-radius:
+        15px;
+
+    background:
+        #fffdf8;
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+
+    transition:
+        .35s ease;
+
+    animation:
+        aparecer .7s ease;
+}
+
+.lugar-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--dorado);
+
+    box-shadow:
+        0 22px 45px
+        rgba(20, 38, 28, .22);
+}
+
+.destacado-grande {
+
+    grid-column:
+        span 1;
+}
+
+
+/* =====================================================
+   IMAGEN DE LUGAR
+===================================================== */
+
+.lugar-imagen {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        230px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--crema-2);
+}
+
+.lugar-card:not(.destacado-grande)
+.lugar-imagen {
+
+    height:
+        190px;
+}
+
+.lugar-imagen img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform .6s ease;
+}
+
+.lugar-card:hover
+.lugar-imagen img {
+
+    transform:
+        scale(1.07);
+}
+
+
+/* =====================================================
+   CAPA SOBRE IMAGEN
+===================================================== */
+
+.lugar-imagen::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            transparent 55%,
+            rgba(9, 43, 29, .70)
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* =====================================================
+   ETIQUETA
+===================================================== */
+
+.etiqueta {
+
+    position:
+        absolute;
+
+    top:
+        15px;
+
+    left:
+        15px;
+
+    z-index:
+        2;
+
+    padding:
+        7px 12px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(9, 43, 29, .94);
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.lugar-info {
+
+    padding:
+        25px;
+}
+
+.tipo {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+}
+
+.lugar-info h3 {
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.2;
+}
+
+.lugar-info p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        #667169;
+
+    font-size:
+        13px;
+}
+
+
+/* =====================================================
+   BOTONES DE LUGAR
+===================================================== */
+
+.acciones-lugar {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+
+    flex-wrap:
+        wrap;
+}
+
+.boton-menu-lugar {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    padding:
+        10px 17px;
+
+    border:
+        1px solid
+        var(--verde);
+
+    border-radius:
+        7px;
+
+    background:
+        var(--verde);
+
+    color:
+        var(--crema);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        all .35s ease;
+}
+
+.boton-menu-lugar span {
+
+    color:
+        var(--dorado-claro);
+
+    transition:
+        .3s ease;
+}
+
+.boton-menu-lugar:hover {
+
+    background:
+        var(--verde-3);
+
+    border-color:
+        var(--dorado);
+
+    color:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+}
+
+.boton-menu-lugar:hover span {
+
+    transform:
+        translateX(4px);
+}
+
+.boton-contacto-lugar {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        var(--beige);
+
+    border-radius:
+        7px;
+
+    background:
+        transparent;
+
+    color:
+        var(--verde);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        all .35s ease;
+}
+
+.boton-contacto-lugar:hover {
+
+    background:
+        var(--crema-2);
+
+    border-color:
+        var(--dorado);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   FRASE
+===================================================== */
+
+.frase {
+
+    position:
+        relative;
+
+    padding:
+        110px 0;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    background:
+        linear-gradient(
+            rgba(9, 43, 29, .94),
+            rgba(9, 43, 29, .98)
+        );
+}
+
+.frase::before {
+
+    content:
+        "“";
+
+    position:
+        absolute;
+
+    top:
+        -20px;
+
+    left:
+        5%;
+
+    color:
+        rgba(198, 164, 91, .08);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        230px;
+}
+
+.frase::after {
+
+    content:
+        "”";
+
+    position:
+        absolute;
+
+    right:
+        5%;
+
+    bottom:
+        -100px;
+
+    color:
+        rgba(198, 164, 91, .08);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        230px;
+}
+
+.comillas {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        var(--dorado);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        65px;
+
+    line-height:
+        .6;
+}
+
+.frase h2 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin-bottom:
+        20px;
+
+    color:
+        var(--crema);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(38px, 5vw, 58px);
+
+    font-weight:
+        600;
+}
+
+.frase h2 em {
+
+    color:
+        var(--dorado-claro);
+
+    font-style:
+        normal;
+}
+
+.frase p {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    color:
+        rgba(248, 245, 238, .75);
+
+    font-size:
+        14px;
+}
+
+
+/* =====================================================
+   LLAMADO FINAL
+===================================================== */
+
+.llamado {
+
+    padding:
+        85px 0;
+
+    background:
+        var(--crema-2);
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .25);
+}
+
+.llamado-contenido {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        40px;
+
+    padding:
+        50px 55px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        15px;
+
+    background:
+        var(--crema);
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+}
+
+.llamado h2 {
+
+    margin-bottom:
+        12px;
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(34px, 5vw, 48px);
+
+    font-weight:
+        600;
+}
+
+.llamado h2 em {
+
+    color:
+        var(--dorado);
+
+    font-style:
+        normal;
+}
+
+.llamado p {
+
+    max-width:
+        550px;
+
+    color:
+        #637067;
+
+    font-size:
+        14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        var(--verde);
+
+    color:
+        var(--crema);
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .35);
+}
+
+.footer-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap:
+        60px;
+
+    padding:
+        65px 0;
+}
+
+.footer-logo {
+
+    margin-bottom:
+        20px;
+}
+
+.footer-logo h2 {
+
+    color:
+        var(--crema);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        27px;
+}
+
+.footer-marca > p {
+
+    max-width:
+        420px;
+
+    color:
+        rgba(248, 245, 238, .7);
+
+    font-size:
+        13px;
+}
+
+.footer-columna {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+}
+
+.footer-columna h3 {
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--dorado-claro);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        20px;
+}
+
+.footer-columna a {
+
+    width:
+        fit-content;
+
+    color:
+        rgba(248, 245, 238, .75);
+
+    font-size:
+        13px;
+
+    transition:
+        .3s ease;
+}
+
+.footer-columna a:hover {
+
+    color:
+        var(--dorado-claro);
+
+    transform:
+        translateX(4px);
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+
+    padding:
+        18px 0;
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .25);
+
+    background:
+        rgba(0, 0, 0, .12);
+}
+
+.copyright .contenedor {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+.copyright p {
+
+    color:
+        rgba(248, 245, 238, .55);
+
+    font-size:
+        11px;
+}
+
+
+/* =====================================================
+   BOTÓN VOLVER ARRIBA
+===================================================== */
+
+#botonArriba {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    z-index:
+        999;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--verde);
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s ease;
+}
+
+#botonArriba.mostrar {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+}
+
+#botonArriba:hover {
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--verde);
+}
+
+
+/* =====================================================
+   ANIMACIÓN
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .barra-navegacion {
+
+        min-height:
+            76px;
+    }
+
+    .boton-menu {
+
+        display:
+            block;
+
+        margin-left:
+            auto;
+    }
+
+    #menuNavegacion {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            76px;
+
+        left:
+            0;
+
+        right:
+            0;
+
+        padding:
+            15px 5%;
+
+        background:
+            var(--verde);
+
+        border-bottom:
+            1px solid
+            rgba(198, 164, 91, .3);
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        box-shadow:
+            0 10px 20px
+            rgba(0, 0, 0, .15);
+    }
+
+    #menuNavegacion.mostrar {
+
+        display:
+            flex;
+    }
+
+    #menuNavegacion a {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+    .hero {
+
+        min-height:
+            500px;
+    }
+
+    .intro-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            35px;
+    }
+
+    .categorias-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .lugares-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .destacado-grande {
+
+        grid-column:
+            span 2;
+    }
+
+    .destacado-grande
+    .lugar-imagen {
+
+        height:
+            260px;
+    }
+
+    .footer-grid {
+
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+
+        gap:
+            35px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor {
+
+        width:
+            92%;
+    }
+
+    .logo {
+
+        padding-left:
+            40px;
+    }
+
+    .logo h1 {
+
+        font-size:
+            19px;
+    }
+
+    .logo > div > span {
+
+        font-size:
+            9px;
+    }
+
+    .logo-icono {
+
+        width:
+            33px;
+
+        height:
+            33px;
+
+        font-size:
+            17px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height:
+            540px;
+    }
+
+    .hero-contenido {
+
+        padding:
+            60px 0 90px;
+    }
+
+    .etiqueta-hero {
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            2px;
+    }
+
+    .hero-contenido h2 {
+
+        font-size:
+            clamp(40px, 13vw, 58px);
+    }
+
+    .hero-contenido > p {
+
+        font-size:
+            13px;
+    }
+
+    .hero-botones {
+
+        flex-direction:
+            column;
+
+        width:
+            100%;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+
+        width:
+            100%;
+
+        max-width:
+            250px;
+    }
+
+
+    /* INTRO */
+
+    .introduccion {
+
+        padding:
+            65px 0;
+    }
+
+    .intro-titulo h2,
+    .encabezado-seccion h2 {
+
+        font-size:
+            36px;
+    }
+
+
+    /* SECCIONES */
+
+    .categorias,
+    .destacados {
+
+        padding:
+            65px 0;
+    }
+
+    .encabezado-seccion {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categoria {
+
+        grid-template-columns:
+            55px 1fr 20px;
+
+        gap:
+            13px;
+
+        min-height:
+            125px;
+
+        padding:
+            18px;
+    }
+
+    .categoria-icono {
+
+        width:
+            55px;
+
+        height:
+            55px;
+
+        font-size:
+            23px;
+    }
+
+    .categoria h3 {
+
+        font-size:
+            19px;
+    }
+
+
+    /* LUGARES */
+
+    .lugares-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .destacado-grande {
+
+        grid-column:
+            span 1;
+    }
+
+    .destacado-grande
+    .lugar-imagen,
+    .lugar-imagen,
+    .lugar-card:not(.destacado-grande)
+    .lugar-imagen {
+
+        height:
+            220px;
+    }
+
+
+    /* BOTONES */
+
+    .acciones-lugar {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        width:
+            100%;
+    }
+
+    .boton-menu-lugar,
+    .boton-contacto-lugar {
+
+        width:
+            100%;
+    }
+
+
+    /* FRASE */
+
+    .frase {
+
+        padding:
+            80px 0;
+    }
+
+    .frase h2 {
+
+        font-size:
+            36px;
+    }
+
+    .frase::before,
+    .frase::after {
+
+        font-size:
+            150px;
+    }
+
+
+    /* LLAMADO */
+
+    .llamado {
+
+        padding:
+            60px 0;
+    }
+
+    .llamado-contenido {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        padding:
+            35px 25px;
+    }
+
+    .llamado-contenido
+    .boton-principal {
+
+        width:
+            100%;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            35px;
+
+        padding:
+            50px 0;
+    }
+
+    .copyright .contenedor {
+
+        flex-direction:
+            column;
+
+        gap:
+            5px;
+    }
+
+    #botonArriba {
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-contenido h2 {
+
+        font-size:
+            34px;
+    }
+
+    .categoria {
+
+        grid-template-columns:
+            50px 1fr 15px;
+    }
+
+    .categoria-icono {
+
+        width:
+            50px;
+
+        height:
+            50px;
+    }
+
+    .lugar-info {
+
+        padding:
+            20px;
+    }
+
+    .lugar-info h3 {
+
+        font-size:
+            22px;
+    }
+}

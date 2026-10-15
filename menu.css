@@ -1,0 +1,1088 @@
+/* =====================================================
+   SABORES DE CAÑAS
+   PÁGINA DE MENÚ - DISEÑO ELEGANTE
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+    --verde: #092b1d;
+    --verde-2: #103b29;
+    --verde-3: #1b4b35;
+
+    --crema: #f8f5ee;
+    --crema-2: #eee8dc;
+    --beige: #d8ccb6;
+
+    --dorado: #c6a45b;
+    --dorado-claro: #e1ca8b;
+
+    --texto: #26342b;
+    --gris: #5c625d;
+
+    --sombra: rgba(20, 38, 28, .16);
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f0e8;
+    color: var(--texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(9, 43, 29, .98);
+
+    border-bottom: 1px solid rgba(198, 164, 91, .30);
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+}
+
+.encabezado .contenedor {
+    min-height: 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+    position: relative;
+    padding-left: 48px;
+}
+
+.logo::before {
+    content: "🌾";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 38px;
+}
+
+.logo h1 {
+    color: #f1dfb5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+}
+
+.logo p {
+    color: #e8e2d6;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+#menuNavegacion {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+#menuNavegacion a {
+    color: #f5f1e8;
+
+    padding: 11px 19px;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: .3s ease;
+}
+
+#menuNavegacion a:hover {
+    color: var(--dorado-claro);
+
+    background: rgba(198, 164, 91, .07);
+}
+
+#menuNavegacion a.activo {
+    color: var(--dorado-claro);
+
+    border-color: var(--dorado);
+
+    background: rgba(198, 164, 91, .08);
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ MÓVIL
+===================================================== */
+
+.boton-menu {
+    display: none;
+
+    border: 1px solid var(--dorado);
+
+    background: transparent;
+
+    color: var(--dorado-claro);
+
+    border-radius: 8px;
+
+    padding: 8px 12px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.boton-menu:hover {
+    background: var(--dorado);
+
+    color: var(--verde);
+}
+
+
+/* =====================================================
+   HERO / BANNER
+===================================================== */
+
+.titulo-principal {
+    min-height: 380px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(7, 39, 27, .82),
+            rgba(7, 39, 27, .92)
+        ),
+        url("img/menu-hero.jpg");
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
+
+
+/* Decoración del hero */
+
+.titulo-principal::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 1px solid rgba(225, 202, 139, .18);
+
+    border-radius: 50%;
+
+    top: -180px;
+    right: -120px;
+}
+
+.titulo-principal::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border: 1px solid rgba(225, 202, 139, .14);
+
+    border-radius: 50%;
+
+    bottom: -150px;
+    left: -100px;
+}
+
+.titulo-principal .contenedor {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 60px 0;
+}
+
+.titulo-principal h2 {
+    color: #f7f3eb;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 65px);
+
+    font-weight: bold;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.titulo-principal h2::after {
+    content: "✦";
+
+    display: block;
+
+    color: var(--dorado);
+
+    font-size: 24px;
+
+    margin-top: 18px;
+}
+
+.titulo-principal p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #ebe6dc;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   SECCIÓN PRINCIPAL
+===================================================== */
+
+.seccion {
+    padding: 75px 0 85px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f4f0e8 0%,
+            #eee8dc 100%
+        );
+}
+
+
+/* =====================================================
+   TARJETAS DE MENÚ
+===================================================== */
+
+.menu-card {
+    position: relative;
+
+    background: var(--crema);
+
+    border: 1px solid rgba(198, 164, 91, .75);
+
+    border-radius: 16px;
+
+    margin-bottom: 45px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px var(--sombra);
+
+    animation: aparecer .6s ease both;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(20, 38, 28, .22);
+}
+
+
+/* =====================================================
+   ENCABEZADO DE CADA MENÚ
+===================================================== */
+
+.menu-header {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 120px;
+
+    padding: 25px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde),
+            var(--verde-2)
+        );
+
+    border-bottom: 1px solid var(--dorado);
+}
+
+
+/* Decoración */
+
+.menu-header::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: 30px;
+    top: 20px;
+
+    color: rgba(225, 202, 139, .25);
+
+    font-size: 30px;
+}
+
+
+/* =====================================================
+   NÚMERO
+===================================================== */
+
+.numero {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    border: 2px solid var(--dorado);
+
+    color: var(--dorado-claro);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transition: .3s ease;
+}
+
+.menu-card:hover .numero {
+    background: var(--dorado);
+
+    color: var(--verde);
+
+    transform: rotate(5deg);
+}
+
+
+/* =====================================================
+   INFORMACIÓN DEL RESTAURANTE
+===================================================== */
+
+.menu-header h3 {
+    color: #f7f3eb;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    margin-bottom: 5px;
+}
+
+.menu-header p {
+    color: #e8e2d6;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   CATEGORÍAS
+===================================================== */
+
+.categoria {
+    padding: 30px 35px;
+
+    position: relative;
+}
+
+.categoria h4 {
+    color: var(--verde);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    letter-spacing: 1px;
+
+    padding-bottom: 12px;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+}
+
+.categoria h4::after {
+    content: "✦";
+
+    display: block;
+
+    color: var(--dorado);
+
+    font-size: 16px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   PLATILLOS
+===================================================== */
+
+.platillo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    min-height: 52px;
+
+    padding: 13px 10px;
+
+    border-bottom: 1px dotted rgba(38, 52, 43, .25);
+
+    border-radius: 6px;
+
+    transition: .25s ease;
+}
+
+.platillo:last-child {
+    border-bottom: none;
+}
+
+.platillo:hover {
+    padding-left: 17px;
+
+    background: rgba(198, 164, 91, .09);
+
+    border-bottom-color: var(--dorado);
+}
+
+.platillo span {
+    color: var(--texto);
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+.platillo strong {
+    color: var(--verde);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   SEPARACIÓN ENTRE CATEGORÍAS
+===================================================== */
+
+.categoria + .categoria {
+    border-top: 1px solid rgba(198, 164, 91, .25);
+
+    padding-top: 30px;
+}
+
+
+/* =====================================================
+   DECORACIÓN DE LA TARJETA
+===================================================== */
+
+.menu-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(198, 164, 91, .12);
+
+    right: -60px;
+    bottom: -60px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: rgba(9, 43, 29, .98);
+
+    color: #f8f6f2;
+
+    width: 100%;
+
+    margin-top: 0;
+
+    padding: 35px 0;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(198, 164, 91, .30);
+}
+
+.footer-contenido {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 10px 0;
+}
+
+.footer-contenido h3 {
+    margin: 0 0 10px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    color: #d6b56d;
+}
+
+.footer-contenido p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #f1eee8;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(214, 181, 109, .4);
+
+    font-size: 13px;
+
+    color: #d8d3ca;
+}
+
+
+/* =====================================================
+   BOTÓN ARRIBA
+===================================================== */
+
+#botonArriba {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 1px solid var(--dorado);
+
+    border-radius: 50%;
+
+    background: var(--verde);
+
+    color: var(--dorado-claro);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 999;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, .18);
+
+    transition: .3s ease;
+}
+
+#botonArriba:hover {
+    background: var(--dorado);
+
+    color: var(--verde);
+
+    transform: translateY(-4px);
+}
+
+#botonArriba.mostrar {
+    display: block;
+}
+
+
+/* =====================================================
+   ANIMACIÓN
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   ANIMACIÓN DE LAS TARJETAS
+===================================================== */
+
+.menu-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.menu-card:nth-child(2) {
+    animation-delay: .10s;
+}
+
+.menu-card:nth-child(3) {
+    animation-delay: .15s;
+}
+
+.menu-card:nth-child(4) {
+    animation-delay: .20s;
+}
+
+.menu-card:nth-child(5) {
+    animation-delay: .25s;
+}
+
+.menu-card:nth-child(6) {
+    animation-delay: .30s;
+}
+
+.menu-card:nth-child(7) {
+    animation-delay: .35s;
+}
+
+.menu-card:nth-child(8) {
+    animation-delay: .40s;
+}
+
+.menu-card:nth-child(9) {
+    animation-delay: .45s;
+}
+
+.menu-card:nth-child(10) {
+    animation-delay: .50s;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .encabezado .contenedor {
+        min-height: 76px;
+    }
+
+    .boton-menu {
+        display: block;
+
+        margin-left: auto;
+    }
+
+    #menuNavegacion {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+
+        right: 0;
+
+        padding: 15px 5%;
+
+        background: var(--verde);
+
+        border-bottom:
+            1px solid rgba(198, 164, 91, .3);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, .15);
+    }
+
+    #menuNavegacion.mostrar {
+        display: flex;
+    }
+
+    #menuNavegacion a {
+        text-align: center;
+    }
+
+    .titulo-principal {
+        min-height: 350px;
+    }
+
+    .menu-header {
+        padding: 22px 25px;
+    }
+
+    .categoria {
+        padding: 25px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor {
+        width: 92%;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        padding-left: 39px;
+    }
+
+    .logo::before {
+        font-size: 30px;
+    }
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .logo p {
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .titulo-principal {
+        min-height: 330px;
+    }
+
+    .titulo-principal .contenedor {
+        padding: 45px 0;
+    }
+
+    .titulo-principal h2 {
+        font-size: 36px;
+    }
+
+    .titulo-principal p {
+        font-size: 13px;
+
+        padding: 0 10px;
+    }
+
+
+    /* SECCIÓN */
+
+    .seccion {
+        padding: 45px 0;
+    }
+
+
+    /* TARJETA */
+
+    .menu-card {
+        margin-bottom: 30px;
+
+        border-radius: 12px;
+    }
+
+
+    /* ENCABEZADO */
+
+    .menu-header {
+        display: flex;
+
+        align-items: flex-start;
+
+        padding: 22px 18px;
+
+        gap: 14px;
+    }
+
+    .menu-header::after {
+        display: none;
+    }
+
+
+    /* NÚMERO */
+
+    .numero {
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 16px;
+    }
+
+
+    /* TÍTULO */
+
+    .menu-header h3 {
+        font-size: 22px;
+    }
+
+    .menu-header p {
+        font-size: 12px;
+    }
+
+
+    /* CATEGORÍA */
+
+    .categoria {
+        padding: 22px 18px;
+    }
+
+    .categoria h4 {
+        font-size: 18px;
+    }
+
+
+    /* PLATILLOS */
+
+    .platillo {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        padding: 12px 4px;
+    }
+
+    .platillo:hover {
+        padding-left: 8px;
+    }
+
+    .platillo span {
+        font-size: 13px;
+    }
+
+    .platillo strong {
+        font-size: 12px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 0;
+    }
+
+    .footer-contenido h3 {
+        font-size: 21px;
+    }
+
+    .footer-contenido p {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+
+    /* BOTÓN ARRIBA */
+
+    #botonArriba {
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 44px;
+
+        height: 44px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .logo p {
+        font-size: 8px;
+    }
+
+    .logo::before {
+        font-size: 26px;
+    }
+
+    .titulo-principal h2 {
+        font-size: 31px;
+    }
+
+    .titulo-principal p {
+        font-size: 12px;
+    }
+
+    .menu-header {
+        padding: 18px 14px;
+    }
+
+    .numero {
+        width: 44px;
+
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+    .menu-header h3 {
+        font-size: 19px;
+    }
+
+    .menu-header p {
+        font-size: 11px;
+    }
+
+    .categoria {
+        padding: 20px 14px;
+    }
+
+    .categoria h4 {
+        font-size: 16px;
+    }
+
+    .platillo span {
+        font-size: 12px;
+    }
+
+    .platillo strong {
+        font-size: 11px;
+    }
+}

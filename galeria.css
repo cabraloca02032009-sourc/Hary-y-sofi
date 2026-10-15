@@ -1,0 +1,1219 @@
+/* =====================================================
+   SABORES DE CAÑAS
+   GALERÍA - ESTILO ELEGANTE
+===================================================== */
+
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f4f0e8;
+
+    color: #24382c;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+:root {
+
+    --verde: #092b1d;
+
+    --verde-2: #103b29;
+
+    --verde-3: #1b4b35;
+
+    --crema: #f8f5ee;
+
+    --crema-2: #eee8dc;
+
+    --beige: #d8ccb6;
+
+    --dorado: #c6a45b;
+
+    --dorado-claro: #e1ca8b;
+
+    --texto: #26342b;
+
+    --sombra:
+        rgba(20, 38, 28, .16);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    width: min(1120px, 90%);
+
+    margin: 0 auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.encabezado {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(9, 43, 29, .98);
+
+    border-bottom:
+        1px solid
+        rgba(198, 164, 91, .30);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .12);
+
+}
+
+
+.encabezado-contenido {
+
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    position: relative;
+
+    padding-left: 48px;
+
+}
+
+
+.logo::before {
+
+    content: "🌾";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size: 38px;
+
+}
+
+
+.logo h1 {
+
+    color:
+        #f1dfb5;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+    line-height: 1.05;
+
+}
+
+
+.logo p {
+
+    color:
+        #e8e2d6;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+#menuNavegacion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+#menuNavegacion a {
+
+    color:
+        #f5f1e8;
+
+    text-decoration: none;
+
+    padding:
+        11px 19px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        .3s ease;
+
+}
+
+
+#menuNavegacion a:hover {
+
+    color:
+        var(--dorado-claro);
+
+}
+
+
+#menuNavegacion a.activo {
+
+    color:
+        var(--dorado-claro);
+
+    border-color:
+        var(--dorado);
+
+    background:
+        rgba(198, 164, 91, .06);
+
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ RESPONSIVE
+===================================================== */
+
+.boton-menu {
+
+    display: none;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    background:
+        transparent;
+
+    color:
+        var(--dorado-claro);
+
+    border-radius: 8px;
+
+    padding:
+        8px 12px;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   HERO GALERÍA
+===================================================== */
+
+.titulo-principal {
+
+    min-height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            rgba(7, 39, 27, .90),
+            rgba(7, 39, 27, .94)
+        ),
+
+        url("../img/galeria-hero.jpg")
+        center/cover
+        no-repeat;
+
+}
+
+
+/* =====================================================
+   CONTENIDO HERO
+===================================================== */
+
+.hero-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding:
+        50px 0 95px;
+
+}
+
+
+.icono-galeria {
+
+    font-size: 45px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+
+}
+
+
+.linea-dorada {
+
+    width: 55px;
+
+    height: 2px;
+
+    background:
+        var(--dorado);
+
+    margin:
+        0 auto 12px;
+
+}
+
+
+.titulo-principal h2 {
+
+    color:
+        #f7f3eb;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(44px, 6vw, 66px);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+}
+
+
+.titulo-principal h2 span {
+
+    color:
+        var(--dorado-claro);
+
+}
+
+
+.titulo-principal p {
+
+    max-width: 650px;
+
+    margin:
+        22px auto 0;
+
+    color:
+        #ebe6dc;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================================
+   ADORNO HERO
+===================================================== */
+
+.adorno-hero {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        var(--dorado);
+
+    margin-top: 16px;
+
+}
+
+
+.adorno-hero span {
+
+    width: 72px;
+
+    height: 1px;
+
+    background:
+        var(--dorado);
+
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.hero-decoracion {
+
+    position: absolute;
+
+    z-index: 1;
+
+    opacity: .14;
+
+    pointer-events: none;
+
+}
+
+
+.hero-decoracion-izquierda {
+
+    left: 25px;
+
+    bottom: -35px;
+
+    font-size: 145px;
+
+    transform:
+        rotate(-12deg);
+
+}
+
+
+.hero-decoracion-derecha {
+
+    right: -10px;
+
+    bottom: -20px;
+
+    font-size: 190px;
+
+    opacity: .16;
+
+}
+
+
+/* =====================================================
+   SECCIÓN GALERÍA
+===================================================== */
+
+.seccion-galeria {
+
+    background:
+        #f4f0e8;
+
+    padding:
+        0 0 85px;
+
+}
+
+
+/* =====================================================
+   ENCABEZADO DE LA GALERÍA
+===================================================== */
+
+.encabezado-galeria {
+
+    width:
+        min(850px, 100%);
+
+    margin:
+        -58px auto 42px;
+
+    position:
+        relative;
+
+    z-index: 10;
+
+    text-align:
+        center;
+
+    background:
+        var(--crema);
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .75);
+
+    border-radius:
+        14px;
+
+    padding:
+        30px 35px;
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+
+}
+
+
+.encabezado-galeria::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .35);
+
+    border-radius:
+        9px;
+
+    pointer-events:
+        none;
+
+}
+
+
+.encabezado-galeria h2 {
+
+    position:
+        relative;
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.encabezado-galeria p {
+
+    position:
+        relative;
+
+    color:
+        #6e716b;
+
+    font-size:
+        14px;
+
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        32px;
+
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.tarjeta {
+
+    background:
+        var(--crema);
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .70);
+
+    border-radius:
+        15px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+
+    transition:
+        .35s ease;
+
+}
+
+
+.tarjeta:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 22px 45px
+        rgba(20, 38, 28, .22);
+
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.imagen-contenedor {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    height:
+        310px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--crema-2);
+
+}
+
+
+.imagen-contenedor img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform .6s ease;
+
+}
+
+
+.tarjeta:hover
+.imagen-contenedor img {
+
+    transform:
+        scale(1.07);
+
+}
+
+
+/* =====================================================
+   CAPA SOBRE IMAGEN
+===================================================== */
+
+.imagen-contenedor::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            transparent 55%,
+            rgba(9, 43, 29, .72)
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =====================================================
+   NÚMERO
+===================================================== */
+
+.numero {
+
+    position:
+        absolute;
+
+    top:
+        17px;
+
+    left:
+        17px;
+
+    z-index:
+        2;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(9, 43, 29, .90);
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.tarjeta figcaption {
+
+    padding:
+        23px 25px 26px;
+
+}
+
+
+.tarjeta h3 {
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        24px;
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.tarjeta p {
+
+    color:
+        #6d716b;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =====================================================
+   DETALLE DORADO
+===================================================== */
+
+.tarjeta figcaption::before {
+
+    content: "✦";
+
+    display:
+        block;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        12px;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        var(--verde);
+
+    color:
+        #e9e3d7;
+
+    text-align:
+        center;
+
+    padding:
+        48px 20px 28px;
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .3);
+
+}
+
+
+.footer-contenido h3 {
+
+    color:
+        var(--dorado-claro);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        27px;
+
+}
+
+
+.footer-contenido p {
+
+    font-size:
+        13px;
+
+    margin-top:
+        5px;
+
+}
+
+
+.copyright {
+
+    color:
+        #d5d0c5;
+
+    text-align:
+        center;
+
+    font-size:
+        12px;
+
+    margin-top:
+        25px;
+
+    opacity:
+        .75;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .encabezado-contenido {
+
+        min-height:
+            76px;
+
+    }
+
+
+    .boton-menu {
+
+        display:
+            block;
+
+        margin-left:
+            auto;
+
+    }
+
+
+    #menuNavegacion {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            76px;
+
+        left:
+            0;
+
+        right:
+            0;
+
+        padding:
+            15px 5%;
+
+        background:
+            var(--verde);
+
+        border-bottom:
+            1px solid
+            rgba(198, 164, 91, .3);
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    #menuNavegacion.mostrar {
+
+        display:
+            flex;
+
+    }
+
+
+    #menuNavegacion a {
+
+        text-align:
+            center;
+
+    }
+
+
+    .galeria {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            24px;
+
+    }
+
+
+    .imagen-contenedor {
+
+        height:
+            260px;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor {
+
+        width:
+            92%;
+
+    }
+
+
+    .logo {
+
+        padding-left:
+            39px;
+
+    }
+
+
+    .logo::before {
+
+        font-size:
+            30px;
+
+    }
+
+
+    .logo h1 {
+
+        font-size:
+            22px;
+
+    }
+
+
+    .logo p {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .titulo-principal {
+
+        min-height:
+            340px;
+
+    }
+
+
+    .hero-contenido {
+
+        padding:
+            50px 0 75px;
+
+    }
+
+
+    .icono-galeria {
+
+        font-size:
+            38px;
+
+    }
+
+
+    .titulo-principal h2 {
+
+        font-size:
+            40px;
+
+    }
+
+
+    .titulo-principal p {
+
+        font-size:
+            13px;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .encabezado-galeria {
+
+        margin-top:
+            -48px;
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .encabezado-galeria h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .encabezado-galeria p {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .galeria {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            24px;
+
+    }
+
+
+    .imagen-contenedor {
+
+        height:
+            250px;
+
+    }
+
+
+    .tarjeta h3 {
+
+        font-size:
+            22px;
+
+    }
+
+
+    .tarjeta p {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .hero-decoracion-derecha {
+
+        font-size:
+            110px;
+
+    }
+
+
+    .hero-decoracion-izquierda {
+
+        font-size:
+            100px;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .titulo-principal h2 {
+
+        font-size:
+            34px;
+
+    }
+
+
+    .imagen-contenedor {
+
+        height:
+            220px;
+
+    }
+
+
+    .tarjeta figcaption {
+
+        padding:
+            20px;
+
+    }
+
+}

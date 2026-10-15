@@ -1,0 +1,1409 @@
+
+/* =====================================================
+   SABORES DE CAÑAS
+   PÁGINA LUGARES
+   ESTILO ELEGANTE - IGUAL A GALERÍA
+===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --verde: #092b1d;
+    --verde-2: #103b29;
+    --verde-3: #1b4b35;
+
+    --crema: #f8f5ee;
+    --crema-2: #eee8dc;
+    --beige: #d8ccb6;
+
+    --dorado: #c6a45b;
+    --dorado-claro: #e1ca8b;
+
+    --texto: #26342b;
+
+    --gris: #6d716b;
+
+    --sombra:
+        rgba(20, 38, 28, .16);
+}
+
+
+/* =====================================================
+   RESETEO
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        #f4f0e8;
+
+    color:
+        var(--texto);
+
+    line-height:
+        1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    width:
+        min(1120px, 90%);
+
+    margin:
+        0 auto;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    background:
+        rgba(9, 43, 29, .98);
+
+    border-bottom:
+        1px solid
+        rgba(198, 164, 91, .30);
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .12);
+}
+
+.encabezado > .contenedor {
+
+    min-height:
+        86px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    position:
+        relative;
+
+    padding-left:
+        48px;
+
+    min-width:
+        max-content;
+}
+
+.logo::before {
+
+    content:
+        "🌾";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        50%;
+
+    transform:
+        translateY(-50%);
+
+    font-size:
+        36px;
+}
+
+.logo h1 {
+
+    color:
+        #f1dfb5;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        27px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.05;
+}
+
+.logo p {
+
+    margin-top:
+        5px;
+
+    color:
+        #e8e2d6;
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        .4px;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+#menuNavegacion {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+}
+
+#menuNavegacion a {
+
+    color:
+        #f5f1e8;
+
+    padding:
+        11px 19px;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius:
+        8px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    transition:
+        .3s ease;
+}
+
+#menuNavegacion a:hover {
+
+    color:
+        var(--dorado-claro);
+
+    background:
+        rgba(198, 164, 91, .04);
+}
+
+#menuNavegacion a.activo {
+
+    color:
+        var(--dorado-claro);
+
+    border-color:
+        var(--dorado);
+
+    background:
+        rgba(198, 164, 91, .06);
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ MÓVIL
+===================================================== */
+
+.boton-menu {
+
+    display:
+        none;
+
+    padding:
+        8px 12px;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        8px;
+
+    background:
+        transparent;
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        22px;
+
+    cursor:
+        pointer;
+
+    transition:
+        .3s ease;
+}
+
+.boton-menu:hover {
+
+    background:
+        rgba(198, 164, 91, .10);
+}
+
+
+/* =====================================================
+   HERO / TÍTULO
+===================================================== */
+
+.titulo-principal {
+
+    position:
+        relative;
+
+    min-height:
+        390px;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    background:
+
+        linear-gradient(
+            rgba(7, 39, 27, .90),
+            rgba(7, 39, 27, .95)
+        ),
+
+        url("../img/hero.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+/* =====================================================
+   DECORACIONES HERO
+===================================================== */
+
+.titulo-principal::before {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    left:
+        7%;
+
+    bottom:
+        -25px;
+
+    color:
+        rgba(198, 164, 91, .13);
+
+    font-size:
+        150px;
+
+    transform:
+        rotate(-15deg);
+}
+
+.titulo-principal::after {
+
+    content:
+        "✦";
+
+    position:
+        absolute;
+
+    right:
+        7%;
+
+    top:
+        25px;
+
+    color:
+        rgba(198, 164, 91, .12);
+
+    font-size:
+        110px;
+
+    transform:
+        rotate(15deg);
+}
+
+
+/* =====================================================
+   CONTENIDO DEL HERO
+===================================================== */
+
+.titulo-principal .contenedor {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    padding:
+        60px 0 90px;
+}
+
+.titulo-principal .contenedor::before {
+
+    content:
+        "LUGARES GASTRONÓMICOS";
+
+    display:
+        block;
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        3px;
+}
+
+.titulo-principal h2 {
+
+    color:
+        #f7f3eb;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(40px, 6vw, 62px);
+
+    font-weight:
+        600;
+
+    line-height:
+        1.1;
+
+    animation:
+        aparecer .8s ease;
+}
+
+.titulo-principal h2::after {
+
+    content:
+        "";
+
+    display:
+        block;
+
+    width:
+        55px;
+
+    height:
+        2px;
+
+    margin:
+        17px auto 0;
+
+    background:
+        var(--dorado);
+}
+
+.titulo-principal p {
+
+    max-width:
+        650px;
+
+    margin:
+        20px auto 0;
+
+    color:
+        #ebe6dc;
+
+    font-size:
+        15px;
+
+    animation:
+        aparecer 1s ease;
+}
+
+
+/* =====================================================
+   SECCIÓN PRINCIPAL
+===================================================== */
+
+.seccion {
+
+    padding:
+        85px 0 100px;
+
+    background:
+        #f4f0e8;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE LUGARES
+===================================================== */
+
+.lugares {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        32px;
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.lugar {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--crema);
+
+    border:
+        1px solid
+        rgba(198, 164, 91, .70);
+
+    border-radius:
+        15px;
+
+    box-shadow:
+        0 15px 35px
+        var(--sombra);
+
+    transition:
+        all .35s ease;
+
+    animation:
+        aparecer .7s ease;
+}
+
+.lugar:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        var(--dorado);
+
+    box-shadow:
+        0 22px 45px
+        rgba(20, 38, 28, .22);
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.lugar > img {
+
+    width:
+        100%;
+
+    height:
+        285px;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    background:
+        var(--crema-2);
+
+    transition:
+        transform .6s ease;
+}
+
+.lugar:hover > img {
+
+    transform:
+        scale(1.06);
+}
+
+
+/* =====================================================
+   CAPA SOBRE IMAGEN
+===================================================== */
+
+.lugar::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        285px;
+
+    z-index:
+        1;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            transparent 50%,
+            rgba(9, 43, 29, .68)
+        );
+}
+
+
+/* =====================================================
+   NÚMERO DECORATIVO
+===================================================== */
+
+.lugar:nth-child(1)::after,
+.lugar:nth-child(2)::after,
+.lugar:nth-child(3)::after,
+.lugar:nth-child(4)::after,
+.lugar:nth-child(5)::after,
+.lugar:nth-child(6)::after,
+.lugar:nth-child(7)::after,
+.lugar:nth-child(8)::after,
+.lugar:nth-child(9)::after,
+.lugar:nth-child(10)::after {
+
+    position:
+        absolute;
+
+    top:
+        16px;
+
+    left:
+        16px;
+
+    z-index:
+        3;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(9, 43, 29, .90);
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+}
+
+.lugar:nth-child(1)::after {
+    content: "01";
+}
+
+.lugar:nth-child(2)::after {
+    content: "02";
+}
+
+.lugar:nth-child(3)::after {
+    content: "03";
+}
+
+.lugar:nth-child(4)::after {
+    content: "04";
+}
+
+.lugar:nth-child(5)::after {
+    content: "05";
+}
+
+.lugar:nth-child(6)::after {
+    content: "06";
+}
+
+.lugar:nth-child(7)::after {
+    content: "07";
+}
+
+.lugar:nth-child(8)::after {
+    content: "08";
+}
+
+.lugar:nth-child(9)::after {
+    content: "09";
+}
+
+.lugar:nth-child(10)::after {
+    content: "10";
+}
+
+
+/* =====================================================
+   CONTENIDO TARJETA
+===================================================== */
+
+.lugar-contenido {
+
+    position:
+        relative;
+
+    padding:
+        25px 27px 28px;
+
+    background:
+        var(--crema);
+}
+
+
+/* =====================================================
+   DETALLE DORADO
+===================================================== */
+
+.lugar-contenido::before {
+
+    content:
+        "✦";
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        var(--dorado);
+
+    font-size:
+        12px;
+}
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+.lugar-contenido h3 {
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--verde);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.2;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.lugar-contenido p {
+
+    margin-bottom:
+        13px;
+
+    color:
+        #6d716b;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.65;
+}
+
+.lugar-contenido strong {
+
+    color:
+        var(--verde);
+
+    font-weight:
+        700;
+}
+
+
+/* =====================================================
+   BOTÓN VER MENÚ
+===================================================== */
+
+.ver-mas {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    margin-top:
+        8px;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        var(--verde);
+
+    border-radius:
+        7px;
+
+    background:
+        var(--verde);
+
+    color:
+        var(--crema);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        all .35s ease;
+}
+
+.ver-mas::after {
+
+    content:
+        "→";
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        17px;
+
+    transition:
+        transform .3s ease;
+}
+
+.ver-mas:hover {
+
+    background:
+        var(--verde-3);
+
+    border-color:
+        var(--dorado);
+
+    color:
+        var(--dorado-claro);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(9, 43, 29, .20);
+}
+
+.ver-mas:hover::after {
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background:
+        var(--verde);
+
+    color:
+        var(--crema);
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .35);
+}
+
+.footer-contenido {
+
+    padding:
+        55px 0 35px;
+
+    text-align:
+        center;
+}
+
+.footer-contenido h3 {
+
+    color:
+        var(--dorado-claro);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        27px;
+
+    font-weight:
+        600;
+}
+
+.footer-contenido p {
+
+    margin-top:
+        7px;
+
+    color:
+        rgba(248, 245, 238, .72);
+
+    font-size:
+        13px;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+.copyright {
+
+    padding:
+        18px 20px;
+
+    border-top:
+        1px solid
+        rgba(198, 164, 91, .25);
+
+    background:
+        rgba(0, 0, 0, .12);
+
+    color:
+        rgba(248, 245, 238, .55);
+
+    text-align:
+        center;
+
+    font-size:
+        11px;
+}
+
+
+/* =====================================================
+   BOTÓN VOLVER ARRIBA
+===================================================== */
+
+#botonArriba {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    z-index:
+        999;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        var(--dorado);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--verde);
+
+    color:
+        var(--dorado-claro);
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s ease;
+}
+
+#botonArriba.mostrar {
+
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+}
+
+#botonArriba:hover {
+
+    background:
+        var(--dorado);
+
+    color:
+        var(--verde);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   ANIMACIÓN
+===================================================== */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .encabezado > .contenedor {
+
+        min-height:
+            76px;
+    }
+
+    .boton-menu {
+
+        display:
+            block;
+
+        margin-left:
+            auto;
+    }
+
+    #menuNavegacion {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            76px;
+
+        left:
+            0;
+
+        right:
+            0;
+
+        padding:
+            15px 5%;
+
+        background:
+            var(--verde);
+
+        border-bottom:
+            1px solid
+            rgba(198, 164, 91, .30);
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        box-shadow:
+            0 10px 20px
+            rgba(0, 0, 0, .15);
+    }
+
+    #menuNavegacion.mostrar {
+
+        display:
+            flex;
+    }
+
+    #menuNavegacion a {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+    .titulo-principal {
+
+        min-height:
+            350px;
+    }
+
+    .lugares {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            24px;
+    }
+
+    .lugar > img,
+    .lugar::before {
+
+        height:
+            250px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .contenedor {
+
+        width:
+            92%;
+    }
+
+    .logo {
+
+        padding-left:
+            39px;
+    }
+
+    .logo::before {
+
+        font-size:
+            29px;
+    }
+
+    .logo h1 {
+
+        font-size:
+            21px;
+    }
+
+    .logo p {
+
+        font-size:
+            9px;
+    }
+
+    .titulo-principal {
+
+        min-height:
+            340px;
+    }
+
+    .titulo-principal .contenedor {
+
+        padding:
+            50px 0 75px;
+    }
+
+    .titulo-principal .contenedor::before {
+
+        font-size:
+            9px;
+
+        letter-spacing:
+            2px;
+    }
+
+    .titulo-principal h2 {
+
+        font-size:
+            39px;
+    }
+
+    .titulo-principal p {
+
+        padding:
+            0 10px;
+
+        font-size:
+            13px;
+    }
+
+    .seccion {
+
+        padding:
+            65px 0 75px;
+    }
+
+    .lugares {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            24px;
+    }
+
+    .lugar > img,
+    .lugar::before {
+
+        height:
+            250px;
+    }
+
+    .lugar-contenido {
+
+        padding:
+            22px 22px 25px;
+    }
+
+    .lugar-contenido h3 {
+
+        font-size:
+            22px;
+    }
+
+    .lugar-contenido p {
+
+        font-size:
+            12px;
+    }
+
+    .ver-mas {
+
+        width:
+            100%;
+    }
+
+    #botonArriba {
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .titulo-principal h2 {
+
+        font-size:
+            34px;
+    }
+
+    .lugar > img,
+    .lugar::before {
+
+        height:
+            220px;
+    }
+
+    .lugar-contenido {
+
+        padding:
+            20px;
+    }
+
+    .lugar-contenido h3 {
+
+        font-size:
+            21px;
+    }
+}
